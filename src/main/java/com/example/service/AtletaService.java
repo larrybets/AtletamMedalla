@@ -21,9 +21,19 @@ public class AtletaService {
     public void testAtletas(){
 
         Atleta atleta1 = new Atleta ("Larry","Sanchez","Peru",LocalDate.of(1990 ,02, 27));
-        Atleta atleta2 = new Atleta ("Larry","Sanchez","Peru",LocalDate.of(1990 ,02, 27));
-        Atleta atleta3 = new Atleta ("Larry","Sanchez","Peru",LocalDate.of(1990 ,02, 27));
-        Atleta atleta4 = new Atleta ("Larry","Sanchez","Peru",LocalDate.of(1990 ,02, 27));
+        atletaRepository.save(atleta1);
+        Atleta atleta2 = new Atleta ("Sergio","Diaz","Jamaica",LocalDate.of(1996 ,02, 9));
+        atletaRepository.save(atleta2);
+
+        Atleta atleta3 = new Atleta ("Nando","Aranda","Valenciana",LocalDate.of(1994 ,07, 21));
+        atletaRepository.save(atleta3);
+
+        Atleta atleta4 = new Atleta ("Victor","Amador","Mongol",LocalDate.of(1992 ,07, 27));
+        atletaRepository.save(atleta4);
+
+        Atleta atleta5 = new Atleta ("Kim","Marica","Barricadas",LocalDate.of(1992 ,06, 02));
+        atletaRepository.save(atleta5);
+
 
     }
 

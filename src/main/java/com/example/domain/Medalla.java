@@ -8,7 +8,6 @@ import javax.persistence.ManyToOne;
  * Created by DAM on 30/11/16.
  */
 public class Medalla {
-
     private long id;
     private enum Enumeracion {Oro,Plata,Bronce}
     private String Especialidad;
