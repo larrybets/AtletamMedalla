@@ -1,6 +1,8 @@
 package com.example.service;
 
 import com.example.domain.Atleta;
+import com.example.domain.Enumeracion;
+import com.example.domain.Medalla;
 import com.example.repository.AtletaRepository;
 import com.example.repository.MedallaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +36,24 @@ public class AtletaService {
         Atleta atleta5 = new Atleta ("Kim","Marica","Barricadas",LocalDate.of(1992 ,06, 02));
         atletaRepository.save(atleta5);
 
+        ///////////////////////////////////////////
+
+        Medalla primera = new Medalla(Enumeracion.valueOf("ORO"),"Tiro con arco","", atleta1);
+        medallaRepository.save(primera);
+        Medalla segunda = new Medalla(Enumeracion.valueOf("PLATA"),"Tiro con arco","", atleta2);
+        medallaRepository.save(segunda);
+
+        Medalla tercera = new Medalla(Enumeracion.valueOf("BRONCE"),"Tiro con arco","", atleta3);
+        medallaRepository.save(tercera);
+
+        Medalla cuarta = new Medalla(Enumeracion.valueOf("BRONCE"),"Tiro con arco","", atleta4);
+        medallaRepository.save(cuarta);
+
+        Medalla quinta = new Medalla(Enumeracion.valueOf("ORO"),"Tiro con arco","", atleta5);
+        medallaRepository.save(quinta);
+
+        Medalla sexta = new Medalla(Enumeracion.valueOf("PLATA"),"Tiro con arco","", atleta2);
+        medallaRepository.save(sexta);
 
     }
 

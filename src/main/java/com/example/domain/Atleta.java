@@ -1,25 +1,25 @@
 package com.example.domain;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
 
 /**
  * Created by DAM on 30/11/16.
  */
+@Entity
 public class Atleta {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String Nombre;
     private String Apellidos;
-
     private String Nacionalidad;
     private LocalDate FechaNacimiento;
 
+ public Atleta(){
 
+ }
     public Atleta(String nombre, String apellidos, String nacionalidad, LocalDate fechaNacimiento) {
         Nombre = nombre;
         Apellidos = apellidos;
@@ -65,5 +65,16 @@ public class Atleta {
 
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
         FechaNacimiento = fechaNacimiento;
+    }
+
+    @Override
+    public String toString() {
+        return "Atleta{" +
+                "id=" + id +
+                ", Nombre='" + Nombre + '\'' +
+                ", Apellidos='" + Apellidos + '\'' +
+                ", Nacionalidad='" + Nacionalidad + '\'' +
+                ", FechaNacimiento=" + FechaNacimiento +
+                '}';
     }
 }
