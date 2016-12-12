@@ -9,5 +9,5 @@ import java.util.List;
  * Created by DAM on 1/12/16.
  */
 public interface MedallaRepository extends JpaRepository <Medalla,Long>{
-    List<Medalla> finByCompeti (String nombre);
+    List<Medalla> findByCompeticion (String nombre);
 }

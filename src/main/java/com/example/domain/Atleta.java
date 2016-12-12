@@ -2,7 +2,6 @@ package com.example.domain;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Date;
 
 /**
  * Created by DAM on 30/11/16.
@@ -12,19 +11,19 @@ public class Atleta {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String Nombre;
-    private String Apellidos;
-    private String Nacionalidad;
-    private LocalDate FechaNacimiento;
+    private String nombre;
+    private String apellidos;
+    private String nacionalidad;
+    private LocalDate fechaNacimiento;
 
  public Atleta(){
 
  }
     public Atleta(String nombre, String apellidos, String nacionalidad, LocalDate fechaNacimiento) {
-        Nombre = nombre;
-        Apellidos = apellidos;
-        Nacionalidad = nacionalidad;
-        FechaNacimiento = fechaNacimiento;
+        this.nombre = nombre;
+       this.apellidos = apellidos;
+        this.nacionalidad = nacionalidad;
+        this.fechaNacimiento = fechaNacimiento;
     }
 
     public long getId() {
@@ -36,45 +35,44 @@ public class Atleta {
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     public void setNombre(String nombre) {
-        Nombre = nombre;
+        this.nombre = nombre;
     }
 
     public String getApellidos() {
-        return Apellidos;
+        return apellidos;
     }
 
     public void setApellidos(String apellidos) {
-        Apellidos = apellidos;
+        this.apellidos = apellidos;
     }
-
     public String getNacionalidad() {
-        return Nacionalidad;
+        return nacionalidad;
     }
 
     public void setNacionalidad(String nacionalidad) {
-        Nacionalidad = nacionalidad;
+        this.nacionalidad = nacionalidad;
     }
 
     public LocalDate getFechaNacimiento() {
-        return FechaNacimiento;
+        return fechaNacimiento;
     }
 
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
-        FechaNacimiento = fechaNacimiento;
+        this.fechaNacimiento = fechaNacimiento;
     }
 
     @Override
     public String toString() {
         return "Atleta{" +
                 "id=" + id +
-                ", Nombre='" + Nombre + '\'' +
-                ", Apellidos='" + Apellidos + '\'' +
-                ", Nacionalidad='" + Nacionalidad + '\'' +
-                ", FechaNacimiento=" + FechaNacimiento +
+                ", nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", Nacionalidad='" + nacionalidad + '\'' +
+                ", fechaNacimiento=" + fechaNacimiento +
                 '}';
     }
 }

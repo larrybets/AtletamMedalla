@@ -8,6 +8,6 @@ import java.util.List;
 /**
  * Created by DAM on 1/12/16.
  */
-public interface AtletaRepository  extends JpaRepository<Atleta,Long>{
-    List<Atleta> findByNombreContain(String nombre);
+public interface AtletaRepository extends JpaRepository<Atleta,Long>{
+    List<Atleta> findByNombreContaining(String nombre);
 }

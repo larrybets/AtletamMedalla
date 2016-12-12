@@ -6,12 +6,14 @@ import com.example.domain.Medalla;
 import com.example.repository.AtletaRepository;
 import com.example.repository.MedallaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 
 /**
  * Created by DAM on 1/12/16.
  */
+@Service
 public class AtletaService {
 
     @Autowired

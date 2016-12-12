@@ -1,7 +1,5 @@
 package com.example.domain;
 
-import com.example.domain.Atleta;
-
 import javax.persistence.*;
 
 /**
@@ -12,27 +10,29 @@ public class Medalla {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private Enumeracion Enumeracion;
-    private String Especialidad;
-    private String Competicion;
+    private Enumeracion enumeracion;
+    private String especialidad;
+    private String competicion;
 
 @ManyToOne
+
 private Atleta atleta;
+
     public Medalla() {
 
     }
 
 
-    public Medalla(com.example.domain.Enumeracion enumeracion, String especialidad, String competicion) {
-        Enumeracion = enumeracion;
-        Especialidad = especialidad;
-        Competicion = competicion;
+    public Medalla(Enumeracion enumeracion, String especialidad, String competicion) {
+        this.enumeracion = enumeracion;
+        this.especialidad = especialidad;
+        this.competicion = competicion;
     }
 
-    public Medalla(com.example.domain.Enumeracion enumeracion, String especialidad, String competicion, Atleta atleta) {
-        Enumeracion = enumeracion;
-        Especialidad = especialidad;
-        Competicion = competicion;
+    public Medalla(Enumeracion enumeracion, String especialidad, String competicion, Atleta atleta) {
+        this.enumeracion = enumeracion;
+        this.especialidad = especialidad;
+        this.competicion = competicion;
         this.atleta = atleta;
     }
 
@@ -44,28 +44,28 @@ private Atleta atleta;
         this.id = id;
     }
 
-    public com.example.domain.Enumeracion getEnumeracion() {
-        return Enumeracion;
+    public Enumeracion getEnumeracion() {
+        return this.enumeracion;
     }
 
-    public void setEnumeracion(com.example.domain.Enumeracion enumeracion) {
-        Enumeracion = enumeracion;
+    public void setEnumeracion(Enumeracion enumeracion) {
+        this.enumeracion = enumeracion;
     }
 
     public String getEspecialidad() {
-        return Especialidad;
+        return especialidad;
     }
 
     public void setEspecialidad(String especialidad) {
-        Especialidad = especialidad;
+        this.especialidad = especialidad;
     }
 
     public String getCompeticion() {
-        return Competicion;
+        return competicion;
     }
 
     public void setCompeticion(String competicion) {
-        Competicion = competicion;
+        this.competicion = competicion;
     }
 
     public Atleta getAtleta() {
