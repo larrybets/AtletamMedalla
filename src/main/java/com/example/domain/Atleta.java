@@ -1,7 +1,12 @@
 package com.example.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.StreamSupport;
 
 /**
  * Created by DAM on 30/11/16.
@@ -15,6 +20,9 @@ public class Atleta {
     private String apellidos;
     private String nacionalidad;
     private LocalDate fechaNacimiento;
+    @OneToMany(mappedBy = "atleta")
+    @JsonIgnore
+    private Set<Medalla> medallas = new HashSet<>();
 
  public Atleta(){
 
@@ -24,6 +32,15 @@ public class Atleta {
        this.apellidos = apellidos;
         this.nacionalidad = nacionalidad;
         this.fechaNacimiento = fechaNacimiento;
+
+    }
+
+    public Set<Medalla> getMedallas() {
+        return medallas;
+    }
+
+    public void setMedallas(Set<Medalla> medallas) {
+        this.medallas = medallas;
     }
 
     public long getId() {

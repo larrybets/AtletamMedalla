@@ -10,7 +10,7 @@ public class Medalla {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private Enumeracion enumeracion;
+    private TipoMedalla tipoMedalla;
     private String especialidad;
     private String competicion;
 
@@ -23,14 +23,14 @@ private Atleta atleta;
     }
 
 
-    public Medalla(Enumeracion enumeracion, String especialidad, String competicion) {
-        this.enumeracion = enumeracion;
+    public Medalla(TipoMedalla tipoMedalla, String especialidad, String competicion) {
+        this.tipoMedalla = tipoMedalla;
         this.especialidad = especialidad;
         this.competicion = competicion;
     }
 
-    public Medalla(Enumeracion enumeracion, String especialidad, String competicion, Atleta atleta) {
-        this.enumeracion = enumeracion;
+    public Medalla(TipoMedalla tipoMedalla, String especialidad, String competicion, Atleta atleta) {
+        this.tipoMedalla = tipoMedalla;
         this.especialidad = especialidad;
         this.competicion = competicion;
         this.atleta = atleta;
@@ -44,12 +44,12 @@ private Atleta atleta;
         this.id = id;
     }
 
-    public Enumeracion getEnumeracion() {
-        return this.enumeracion;
+    public TipoMedalla getTipoMedalla() {
+        return this.tipoMedalla;
     }
 
-    public void setEnumeracion(Enumeracion enumeracion) {
-        this.enumeracion = enumeracion;
+    public void setTipoMedalla(TipoMedalla tipoMedalla) {
+        this.tipoMedalla = tipoMedalla;
     }
 
     public String getEspecialidad() {

@@ -1,7 +1,7 @@
 package com.example.service;
 
 import com.example.domain.Atleta;
-import com.example.domain.Enumeracion;
+import com.example.domain.TipoMedalla;
 import com.example.domain.Medalla;
 import com.example.repository.AtletaRepository;
 import com.example.repository.MedallaRepository;
@@ -40,21 +40,21 @@ public class AtletaService {
 
         ///////////////////////////////////////////
 
-        Medalla primera = new Medalla(Enumeracion.valueOf("ORO"),"Tiro con arco","", atleta1);
+        Medalla primera = new Medalla(TipoMedalla.valueOf("ORO"),"Tiro con arco","", atleta1);
         medallaRepository.save(primera);
-        Medalla segunda = new Medalla(Enumeracion.valueOf("PLATA"),"Tiro con arco","", atleta2);
+        Medalla segunda = new Medalla(TipoMedalla.valueOf("PLATA"),"Tiro con arco","", atleta2);
         medallaRepository.save(segunda);
 
-        Medalla tercera = new Medalla(Enumeracion.valueOf("BRONCE"),"Tiro con arco","", atleta3);
+        Medalla tercera = new Medalla(TipoMedalla.valueOf("BRONCE"),"Tiro con arco","", atleta3);
         medallaRepository.save(tercera);
 
-        Medalla cuarta = new Medalla(Enumeracion.valueOf("BRONCE"),"Tiro con arco","", atleta4);
+        Medalla cuarta = new Medalla(TipoMedalla.valueOf("BRONCE"),"Tiro con arco","", atleta4);
         medallaRepository.save(cuarta);
 
-        Medalla quinta = new Medalla(Enumeracion.valueOf("ORO"),"Tiro con arco","", atleta5);
+        Medalla quinta = new Medalla(TipoMedalla.valueOf("ORO"),"Tiro con arco","", atleta5);
         medallaRepository.save(quinta);
 
-        Medalla sexta = new Medalla(Enumeracion.valueOf("PLATA"),"Tiro con arco","", atleta2);
+        Medalla sexta = new Medalla(TipoMedalla.valueOf("PLATA"),"Tiro con arco","", atleta2);
         medallaRepository.save(sexta);
 
     }
